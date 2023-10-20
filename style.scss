@@ -112,12 +112,17 @@ picture {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: 354px;
-            height: 98px;
             padding: 0 20px;
-
+            width: 279px;
+            height: 81px;
+            
             border-radius: 11px;
             background: #F7F9FF;
+            
+            @media screen and (min-width: 1200px) {
+                width: 354px;
+                height: 98px;
+            }
 
             div {
                 display: flex;
@@ -157,6 +162,11 @@ picture {
                 font-weight: 700;
                 line-height: normal;
                 text-decoration-line: underline;
+
+                &:hover {
+                   color: #766CF1;
+                   text-decoration: none;
+                }
             }
         }
 
@@ -178,6 +188,10 @@ picture {
             line-height: normal;
             cursor: pointer;
 
+            &:hover {
+                background: #766CF1;
+            }
+
             @media screen  and (min-width: 1200px){
                 max-width: 354px;
                 height: 50px;
@@ -186,6 +200,7 @@ picture {
 
         .btn-cancel {
             color: #717FA6;
+            background-color: #fff;
             font-family: Red Hat Display;
             font-size: 15px;
             font-style: normal;
@@ -194,6 +209,10 @@ picture {
             border: none;
 
             cursor: pointer;
+
+            &:hover {
+                color: #1F2E55;
+            }
         }
     }
 }
