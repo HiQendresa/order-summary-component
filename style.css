@@ -5,7 +5,7 @@
   --Very-pale-blue: hsl(225, 100%, 98%)
   --Desaturated-blue: hsl(224, 23%, 55%)
   --Dark-blue: hsl(223, 47%, 23%)
-  --font-family-ibm: "IBM Plex Sans", sans-serif;
+  --font-family: "Red Hat Display", sans-serif;
 }
 
 *,
@@ -88,7 +88,7 @@ picture {
 .container .content .title {
   color: var(--Dark-blue);
   text-align: center;
-  font-family: Red Hat Display;
+  font-family: var(--font-family);
   font-size: 28px;
   font-style: normal;
   font-weight: 900;
@@ -97,7 +97,7 @@ picture {
 .container .content .description {
   color: var(--Desaturated-blue);
   text-align: center;
-  font-family: Red Hat Display;
+  font-family: var(--font-family);
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -130,7 +130,7 @@ picture {
 }
 .container .content .offer div p {
   color: #1F2E55;
-  font-family: Red Hat Display;
+  font-family: var(--font-family);
   font-size: 16px;
   font-style: normal;
   font-weight: 900;
@@ -138,7 +138,7 @@ picture {
 }
 .container .content .offer div span {
   color: var(--Desaturated-blue);
-  font-family: Red Hat Display;
+  font-family: var(--font-family);
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -147,7 +147,7 @@ picture {
 }
 .container .content .offer a {
   color: var(--Bright-blue);
-  font-family: Red Hat Display;
+  font-family: var(--font-family);
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -166,7 +166,7 @@ picture {
   background: var(--Bright-blue);
   box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
   color: var(--White-clr);
-  font-family: Red Hat Display;
+  font-family: var(--font-family);
   font-size: 15px;
   font-style: normal;
   font-weight: 900;
@@ -185,7 +185,7 @@ picture {
 .container .content .btn-cancel {
   color: var(--Desaturated-blue);
   background-color: var(--White-clr);
-  font-family: Red Hat Display;
+  font-family: var(--font-family);
   font-size: 15px;
   font-style: normal;
   font-weight: 900;
