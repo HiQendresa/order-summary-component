@@ -1,11 +1,10 @@
 :root {
 
-    --Pale-blue: hsl(225, 100%, 94%)
-    --Bright-blue: hsl(245, 75%, 52%)
-    --White-clr: hsl(0, 0%, 100%)   
-    --Very-pale-blue: hsl(225, 100%, 98%)
-    --Desaturated-blue: hsl(224, 23%, 55%)
-    --Dark-blue: hsl(223, 47%, 23%)
+    --pale-blue: 225, 100%, 94%
+    --bright-blue: 245, 75%, 52%
+    --very-pale-blue: 225, 100%, 98%
+    --desaturated-blue: 224, 23%, 55%
+    --dark-blue: 223, 47%, 23%
 
     --font-family: 'Red Hat Display', sans-serif;
 }
@@ -43,7 +42,7 @@ body {
   max-width: 1440px;
   padding: 0 20px;
   
-  background-color: var(--Pale-blue);
+  background-color: hsl(var(--pale-blue));
   background-image: url('./images/pattern-background-mobile.svg');
   background-repeat: no-repeat;
   
@@ -72,8 +71,7 @@ picture {
 
 .container {
     max-width: 450px;
-    height: 697px;
-    margin: 0 auto;
+    margin: 20% auto;
 
     border-radius: 20px;
     background: #fff;
@@ -93,7 +91,7 @@ picture {
         }
 
         .title {
-            color: var(--Dark-blue);
+            color: #1F2E55;
             text-align: center;
             font-family: var(--font-family);
             font-size: 28px;
@@ -103,13 +101,18 @@ picture {
         }
 
         .description {
-            color: var(--Desaturated-blue);
+            color: #717FA6;
             text-align: center;
             font-family: var(--font-family);
             font-size: 16px;
             font-style: normal;
             font-weight: 500;
             line-height: 26px;
+            width: 263px;
+
+            @media screen and (min-width: 1200px) {
+                width: 334px;
+            }
         }
 
         .offer {
@@ -148,7 +151,7 @@ picture {
                 }
 
                 span {
-                    color: var(--Desaturated-blue);
+                    color: #717FA6;
                     font-family: var(--font-family);
                     font-size: 16px;
                     font-style: normal;
@@ -159,7 +162,7 @@ picture {
             }
 
             a {
-                color: var(--Bright-blue);
+                color:  #382AE1;
                 font-family: var(--font-family);
                 font-size: 14px;
                 font-style: normal;
@@ -181,7 +184,7 @@ picture {
 
             border-radius: 11px;
             border: none;
-            background: var(--Bright-blue);
+            background: #382AE1;
             box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
 
             color: #fff;
@@ -203,7 +206,7 @@ picture {
         }
 
         .btn-cancel {
-            color: var(--Desaturated-blue);
+            color: #717FA6;
             background-color: #fff;
             font-family: var(--font-family);
             font-size: 15px;
