@@ -1,7 +1,10 @@
 :root {
-  --clr-white: 0, 0%, 100%;
-  --clr-black: 244, 23%, 12%;
-  --clr-cream: 20, 33%, 98%;
+  --Pale-blue: hsl(225, 100%, 94%)
+  --Bright-blue: hsl(245, 75%, 52%)
+  --White-clr: hsla(0, 0%, 100%, 1)
+  --Very-pale-blue: hsl(225, 100%, 98%)
+  --Desaturated-blue: hsl(224, 23%, 55%)
+  --Dark-blue: hsl(223, 47%, 23%)
   --font-family-ibm: "IBM Plex Sans", sans-serif;
 }
 
@@ -36,6 +39,7 @@ body {
   overflow-x: hidden;
   max-width: 1440px;
   padding: 0 20px;
+  background-color: var(--Pale-blue);
   background-image: url("./images/pattern-background-mobile.svg");
   background-repeat: no-repeat;
   position: relative;
@@ -66,7 +70,7 @@ picture {
   height: 697px;
   margin: 0 auto;
   border-radius: 20px;
-  background: #FFF;
+  background: var(--White-clr);
   box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.15);
 }
 .container .content {
@@ -82,7 +86,7 @@ picture {
   border-top-right-radius: 20px;
 }
 .container .content .title {
-  color: #1F2E55;
+  color: var(--Dark-blue);
   text-align: center;
   font-family: Red Hat Display;
   font-size: 28px;
@@ -91,7 +95,7 @@ picture {
   line-height: normal;
 }
 .container .content .description {
-  color: #717FA6;
+  color: var(--Desaturated-blue);
   text-align: center;
   font-family: Red Hat Display;
   font-size: 16px;
@@ -133,7 +137,7 @@ picture {
   line-height: normal;
 }
 .container .content .offer div span {
-  color: #717FA6;
+  color: var(--Desaturated-blue);
   font-family: Red Hat Display;
   font-size: 16px;
   font-style: normal;
@@ -142,7 +146,7 @@ picture {
   display: block;
 }
 .container .content .offer a {
-  color: #382AE1;
+  color: var(--Bright-blue);
   font-family: Red Hat Display;
   font-size: 14px;
   font-style: normal;
@@ -159,9 +163,9 @@ picture {
   height: 50px;
   border-radius: 11px;
   border: none;
-  background: #382AE1;
+  background: var(--Bright-blue);
   box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
-  color: #FFF;
+  color: var(--White-clr);
   font-family: Red Hat Display;
   font-size: 15px;
   font-style: normal;
@@ -179,8 +183,8 @@ picture {
   }
 }
 .container .content .btn-cancel {
-  color: #717FA6;
-  background-color: #fff;
+  color: var(--Desaturated-blue);
+  background-color: var(--White-clr);
   font-family: Red Hat Display;
   font-size: 15px;
   font-style: normal;
