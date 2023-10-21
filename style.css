@@ -81,7 +81,7 @@ main .container {
 }
 @media screen and (min-width: 1200px) {
   main .container {
-    top: 95%;
+    top: 55%;
     max-width: 450px;
   }
 }
