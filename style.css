@@ -1,9 +1,11 @@
 :root {
-  --pale-blue: 225, 100%, 94%
-  --bright-blue: 245, 75%, 52%
-  --very-pale-blue: 225, 100%, 98%
-  --desaturated-blue: 224, 23%, 55%
-  --dark-blue: 223, 47%, 23%
+  --clr-pale-blue: 225, 100%, 94%;
+  --bright-blue: 245, 75%, 52%;
+  --very-pale-blue: 225, 100%, 98%;
+  --desaturated-blue: 224, 23%, 55%;
+  --dark-blue: 223, 47%, 23%;
+  --dark-white: 0, 0%, 100%;
+  --clr-lila: 245, 83%, 68%;
   --font-family: "Red Hat Display", sans-serif;
 }
 
@@ -37,20 +39,8 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   max-width: 1440px;
-  padding: 0 20px;
-  background-color: hsl(var(--pale-blue));
-  background-image: url("./images/pattern-background-mobile.svg");
-  background-repeat: no-repeat;
   position: relative;
-}
-@media screen and (min-width: 1200px) {
-  body {
-    background-image: url("./images/pattern-background-desktop.svg");
-    padding: 152px 0px 151px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  background-color: hsl(var(--clr-pale-blue));
 }
 
 a:not([class]) {
@@ -64,14 +54,42 @@ picture {
   display: block;
 }
 
-.container {
-  max-width: 450px;
-  margin: 20% auto;
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 767px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}
+main {
+  overflow-x: hidden;
+}
+main .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 327px;
   border-radius: 20px;
-  background: #fff;
+  background-color: hsl(var(--dark-white));
   box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.15);
 }
-.container .content {
+@media screen and (min-width: 1200px) {
+  main .container {
+    top: 95%;
+    max-width: 450px;
+  }
+}
+main .container img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+main .container .content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,12 +97,8 @@ picture {
   gap: 35px;
   padding: 40px;
 }
-.container .content img {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-.container .content .title {
-  color: #1F2E55;
+main .container .content .title {
+  color: hsl(var(--dark-blue));
   text-align: center;
   font-family: var(--font-family);
   font-size: 28px;
@@ -92,8 +106,8 @@ picture {
   font-weight: 900;
   line-height: normal;
 }
-.container .content .description {
-  color: #717FA6;
+main .container .content .description {
+  color: hsl(var(--desaturated-blue));
   text-align: center;
   font-family: var(--font-family);
   font-size: 16px;
@@ -103,11 +117,11 @@ picture {
   width: 263px;
 }
 @media screen and (min-width: 1200px) {
-  .container .content .description {
+  main .container .content .description {
     width: 334px;
   }
 }
-.container .content .offer {
+main .container .content .offer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,30 +132,30 @@ picture {
   background: #F7F9FF;
 }
 @media screen and (min-width: 1200px) {
-  .container .content .offer {
+  main .container .content .offer {
     width: 354px;
     height: 98px;
   }
 }
-.container .content .offer div {
+main .container .content .offer div {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.container .content .offer div img {
+main .container .content .offer div img {
   width: 48px;
   height: 48px;
 }
-.container .content .offer div p {
-  color: #1F2E55;
+main .container .content .offer div p {
+  color: hsl(var(--dark-blue));
   font-family: var(--font-family);
   font-size: 16px;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
 }
-.container .content .offer div span {
-  color: #717FA6;
+main .container .content .offer div span {
+  color: hsl(var(--desaturated-blue));
   font-family: var(--font-family);
   font-size: 16px;
   font-style: normal;
@@ -149,8 +163,8 @@ picture {
   line-height: normal;
   display: block;
 }
-.container .content .offer a {
-  color: #382AE1;
+main .container .content .offer a {
+  color: hsl(var(--bright-blue));
   font-family: var(--font-family);
   font-size: 14px;
   font-style: normal;
@@ -158,18 +172,18 @@ picture {
   line-height: normal;
   text-decoration-line: underline;
 }
-.container .content .offer a:hover {
-  color: #766CF1;
+main .container .content .offer a:hover {
+  color: hsl(var(--clr-lila));
   text-decoration: none;
 }
-.container .content .btn-payment {
+main .container .content .btn-payment {
   width: 279px;
   height: 50px;
   border-radius: 11px;
   border: none;
-  background: #382AE1;
+  background: hsl(var(--bright-blue));
   box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
-  color: #fff;
+  color: hsl(var(--dark-white));
   font-family: var(--font-family);
   font-size: 15px;
   font-style: normal;
@@ -177,18 +191,18 @@ picture {
   line-height: normal;
   cursor: pointer;
 }
-.container .content .btn-payment:hover {
-  background: #766CF1;
+main .container .content .btn-payment:hover {
+  background: hsl(var(--clr-lila));
 }
 @media screen and (min-width: 1200px) {
-  .container .content .btn-payment {
+  main .container .content .btn-payment {
     max-width: 354px;
     height: 50px;
   }
 }
-.container .content .btn-cancel {
-  color: #717FA6;
-  background-color: #fff;
+main .container .content .btn-cancel {
+  color: hsl(var(--desaturated-blue));
+  background-color: hsl(var(--dark-white));
   font-family: var(--font-family);
   font-size: 15px;
   font-style: normal;
@@ -197,6 +211,6 @@ picture {
   border: none;
   cursor: pointer;
 }
-.container .content .btn-cancel:hover {
-  color: #1F2E55;
+main .container .content .btn-cancel:hover {
+  color: hsl(var(--dark-blue));
 }/*# sourceMappingURL=style.css.map */

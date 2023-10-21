@@ -1,10 +1,12 @@
 :root {
 
-    --pale-blue: 225, 100%, 94%
-    --bright-blue: 245, 75%, 52%
-    --very-pale-blue: 225, 100%, 98%
-    --desaturated-blue: 224, 23%, 55%
-    --dark-blue: 223, 47%, 23%
+    --clr-pale-blue: 225, 100%, 94%;
+    --bright-blue: 245, 75%, 52%;
+    --very-pale-blue: 225, 100%, 98%;
+    --desaturated-blue: 224, 23%, 55%;
+    --dark-blue: 223, 47%, 23%;
+    --dark-white: 0, 0%, 100%;
+    --clr-lila: 245, 83%, 68%;
 
     --font-family: 'Red Hat Display', sans-serif;
 }
@@ -38,24 +40,9 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   overflow-x: hidden;
-
   max-width: 1440px;
-  padding: 0 20px;
-  
-  background-color: hsl(var(--pale-blue));
-  background-image: url('./images/pattern-background-mobile.svg');
-  background-repeat: no-repeat;
-  
   position: relative;
-  
-  @media screen and (min-width: 1200px) {
-      background-image: url('./images/pattern-background-desktop.svg');
-      padding: 152px 0px 151px 0px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-  }
+  background-color: hsl(var(--clr-pale-blue));
 }
 
 a:not([class]) {
@@ -68,15 +55,42 @@ picture {
   display: block;
 }
 
+.desktop {
+    display: none;
+}
+
+@media screen and (min-width: 767px) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+}
+
+main {
+    overflow-x: hidden;
 
 .container {
-    max-width: 450px;
-    margin: 20% auto;
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 327px;
+    
     border-radius: 20px;
-    background: #fff;
+    background-color: hsl(var(--dark-white));
     box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.15);
+    
+    @media screen and (min-width: 1200px) {
+        top: 95%;
+        max-width: 450px;
+    }
 
+    img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;    
+    }
     .content {
         display: flex;
         flex-direction: column;
@@ -85,13 +99,9 @@ picture {
         gap: 35px;
         padding: 40px;
 
-        img {
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;    
-        }
 
         .title {
-            color: #1F2E55;
+            color: hsl(var(--dark-blue));
             text-align: center;
             font-family: var(--font-family);
             font-size: 28px;
@@ -101,7 +111,7 @@ picture {
         }
 
         .description {
-            color: #717FA6;
+            color: hsl(var(--desaturated-blue));
             text-align: center;
             font-family: var(--font-family);
             font-size: 16px;
@@ -142,7 +152,7 @@ picture {
                 }
 
                 p {
-                    color: #1F2E55;
+                    color: hsl(var(--dark-blue));
                     font-family: var(--font-family);
                     font-size: 16px;
                     font-style: normal;
@@ -151,7 +161,7 @@ picture {
                 }
 
                 span {
-                    color: #717FA6;
+                    color: hsl(var(--desaturated-blue));
                     font-family: var(--font-family);
                     font-size: 16px;
                     font-style: normal;
@@ -162,7 +172,7 @@ picture {
             }
 
             a {
-                color:  #382AE1;
+                color:  hsl(var(--bright-blue));
                 font-family: var(--font-family);
                 font-size: 14px;
                 font-style: normal;
@@ -171,7 +181,7 @@ picture {
                 text-decoration-line: underline;
 
                 &:hover {
-                   color: #766CF1;
+                   color: hsl(var(--clr-lila));
                    text-decoration: none;
                 }
             }
@@ -184,10 +194,10 @@ picture {
 
             border-radius: 11px;
             border: none;
-            background: #382AE1;
+            background: hsl(var(--bright-blue));
             box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
 
-            color: #fff;
+            color: hsl(var(--dark-white));
             font-family: var(--font-family);
             font-size: 15px;
             font-style: normal;
@@ -196,7 +206,7 @@ picture {
             cursor: pointer;
 
             &:hover {
-                background: #766CF1;
+                background: hsl(var(--clr-lila));
             }
 
             @media screen  and (min-width: 1200px){
@@ -206,8 +216,8 @@ picture {
         }
 
         .btn-cancel {
-            color: #717FA6;
-            background-color: #fff;
+            color: hsl(var(--desaturated-blue));
+            background-color: hsl(var(--dark-white));
             font-family: var(--font-family);
             font-size: 15px;
             font-style: normal;
@@ -218,8 +228,9 @@ picture {
             cursor: pointer;
 
             &:hover {
-                color: #1F2E55;
+                color: hsl(var(--dark-blue));
             }
         }
     }
+}
 }
